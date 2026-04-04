@@ -1,25 +1,25 @@
 pipeline {
     agent any
-    
+
     stages{
         stage("hostname"){
-            stage{
+            steps{
                 sh "hostname"
             }
         }
         stage("date"){
-            stage{
+            steps{
                 sh "date"
             }
         }
         stage("uptime"){
-            stage{
-                    sh "uptime"
+            steps{
+                sh "uptime"
             }
         }
         stage("free"){
-            stage{
-                    sh "free -h"
+            steps{
+                sh "free -h"
             }
         }     
     }
